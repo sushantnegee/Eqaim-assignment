@@ -1,0 +1,59 @@
+#createBlog{
+    display: grid;
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    background: #E9E9E9;
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid red;
+
+}
+
+.inputField{
+    padding: 10px 5px;
+    font-size: 1.5rem;
+    outline: none;
+    text-align: center;
+    background-color: inherit;
+    border: none;
+    border-radius: 3px;
+}
+
+.inputField:focus::placeholder{
+    visibility: hidden;
+}
+
+#contentBox{
+    height: 400px;
+    resize: none;
+    text-align: left;
+    border: 1px solid red;
+}
+
+#contentBox::placeholder{
+    text-align: center;
+}
+
+
+#blogHeading{
+    margin-top: 1%;
+    font-size: 2rem;
+    border: 1px solid red;
+}
+
+#blogHeading::placeholder{
+    font-size: 2rem;
+}
+
+@media screen and (max-width:700px) {
+    #blogHeading{
+        font-size: 1.4rem;
+    }
+    #blogHeading::placeholder{
+        font-size: 1.4rem;
+    }
+    #contentBox{
+        font-size: 1rem;
+    }
+}
