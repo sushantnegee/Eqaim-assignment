@@ -1,0 +1,18 @@
+.blogCard{
+    height: 250px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    justify-content: center;
+    border-radius: 8px;
+    background: #D9D9D9;
+    transition: 0.5s linear;
+}
+
+.blogCard:hover{
+    background: #858484;
+    color: white;
+    transform: scale(1.04);
+}
+
