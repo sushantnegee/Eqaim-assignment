@@ -45,7 +45,7 @@ const PublishBlog = () => {
         <div id='createBlog'>
             <input onChange={changeHandler} value={blog.title} name='title' type='text' id='blogHeading' className='inputField' placeholder='Enter Blog Title' />
             <textarea onChange={changeHandler} name='content' value={blog.content} type='text' id='contentBox' className='inputField' placeholder='Enter Blog Content' />
-            {/* <button submitBlog={submitBlog}>submit</button> */}
+            <button submitBlog={submitBlog}>submit</button>
         </div>
     )
 }
