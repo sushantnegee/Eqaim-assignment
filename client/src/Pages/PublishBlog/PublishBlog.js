@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './PublishBlog.css';
 import SubmitButton from '../../Componets/Buttons/SubmitButton';
 import HomeButton from '../../Componets/Buttons/HomeButton';
+import EditIcons from '../../Componets/EditIcons/EditIcons';
 
 
 const PublishBlog = () => {
@@ -21,7 +22,7 @@ const PublishBlog = () => {
     const postBlog =async(body)=>{
     
         try{
-            const response = await fetch('http://localhost:8080/blog/',{
+            const response = await fetch('http://localhost:5050/blog/',{
                 method:'POST',
                 body:JSON.stringify(body),
                 headers:{
@@ -39,16 +40,17 @@ const PublishBlog = () => {
         console.log(blog)
         postBlog(blog)
         .then((res)=>navigate('/'))
-        .catch(err=>alert('Not Posted'))
+        .catch(err=>alert('Error Occured While Posting'))
     }
 
 
     return (
         <div id='createBlog'>
-            <HomeButton/>
+            <Link to={'/'}><HomeButton/></Link>
+            <EditIcons/>
             <input onChange={changeHandler} value={blog.title} name='title' type='text' id='blogHeading' className='inputField' placeholder='Enter Blog Title' />
             <textarea onChange={changeHandler} name='content' value={blog.content} type='text' id='contentBox' className='inputField' placeholder='Enter Blog Content' />
-            <SubmitButton submitBlog={submitBlog}/>
+            <SubmitButton submit={submitBlog}/>
         </div>
     )
 }

@@ -4,19 +4,18 @@
     z-index: 1;
 }
 
-.topCorner{
+.homeButton{
+    top:15%;
     left: 5%;
 }
 
-.homeButton{
-    top:5%
-}
-
 .submitButton{
-    top:18%
+    top:28%;
+    left: 5%;
 }
 
-.createBlog{
+.createButton{
+    position:fixed;
     bottom: 5%;
     right: 5%;
 }

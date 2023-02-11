@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import BlogCard from '../../Componets/BlogCard/BlogCard';
+import CreateButton from '../../Componets/Buttons/CreateButton';
 import './Home.css'
 
 
@@ -38,7 +39,7 @@ const Home = () => {
 
                 </div>
             }
-            <button>creat blog</button>
+            <Link to={'publishblog'}><CreateButton/></Link>
         </>
     )
 }

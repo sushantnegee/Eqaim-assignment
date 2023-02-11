@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import HomeButton from '../../Componets/Buttons/HomeButton';
 import "./BlogPost.css"
 
@@ -31,7 +31,7 @@ const BlogPost = () => {
                 <h1>{blog.title}</h1>
                 <p>{blog.content}</p>
                 {/* <button>home</button> */}
-                <HomeButton/>
+                <Link to={'/'}><HomeButton/></Link>
             </div>
         
     )

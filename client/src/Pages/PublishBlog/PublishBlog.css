@@ -6,7 +6,7 @@
     background: #E9E9E9;
     border-radius: 5px;
     padding: 5px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 
 }
 
@@ -28,7 +28,7 @@
     height: 400px;
     resize: none;
     text-align: left;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #contentBox::placeholder{
@@ -39,7 +39,7 @@
 #blogHeading{
     margin-top: 1%;
     font-size: 2rem;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 #blogHeading::placeholder{
