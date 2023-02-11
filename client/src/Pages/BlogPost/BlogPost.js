@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
+import HomeButton from '../../Componets/Buttons/HomeButton';
 import "./BlogPost.css"
 
 const BlogPost = () => {
@@ -29,7 +30,8 @@ const BlogPost = () => {
             !blog?<h1>loading</h1>:<div id='blog'>
                 <h1>{blog.title}</h1>
                 <p>{blog.content}</p>
-                <button>home</button>
+                {/* <button>home</button> */}
+                <HomeButton/>
             </div>
         
     )

@@ -1,0 +1,35 @@
+.buttons{
+    position:absolute;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.topCorner{
+    left: 5%;
+}
+
+.homeButton{
+    top:5%
+}
+
+.submitButton{
+    top:18%
+}
+
+.createBlog{
+    bottom: 5%;
+    right: 5%;
+}
+
+@media screen and (max-height:600px) {
+    .homeButton{
+        top:20%
+    } 
+    .submitButton{
+        top:32%
+    }
+
+    .topCorner{
+        left: 1%;
+    }
+}
