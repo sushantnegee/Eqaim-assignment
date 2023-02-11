@@ -6,6 +6,6 @@ const blogSchema = new mongoose.Schema({
     image:String
 })
 
-const blogModel = mongoose.model('blog',blogSchema);
+const BlogModel = mongoose.model('Blog',blogSchema);
 
-module.export = blogModel;
+module.exports = BlogModel;
