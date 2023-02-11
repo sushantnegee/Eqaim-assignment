@@ -2,8 +2,8 @@
 #blogContainer{
     display: grid;
     grid-template-columns: repeat(3,1fr);
-    width: 90%;
-    gap: 10px;
+    width: 80%;
+    gap: 70px;
     margin: auto;
     margin-top: 1%;
 }

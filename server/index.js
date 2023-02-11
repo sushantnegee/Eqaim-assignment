@@ -2,11 +2,13 @@ const { json } = require('express');
 const express = require('express');
 const connect = require('./dataBase/connect');
 const router = require('./routes/blog.routes');
+const cors = require('cors')
 // const { connect } = require('mongoose');
 
 const app = express();
+app.use(cors())
 app.use(express.json());
-app.use('/',router)
+app.use('/blog',router)
 
 const port = 5050;
 

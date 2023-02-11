@@ -1,5 +1,5 @@
 const express = require('express');
-const { getBlogs, createBlog } = require('../controller/blog.controller');
+const { getBlogs, createBlog, getBlog } = require('../controller/blog.controller');
 
 const router = express.Router();
 
@@ -28,6 +28,22 @@ router.post('/', async (req,res)=>{
     }catch(err){
         console.log(err.message)
         res.status(500).send({
+            err:err.message
+        })
+    }
+})
+
+router.get('/:id', async (req,res)=>{
+    try{
+        const id = req.params.id;
+        const blog = await getBlog(id);
+        // console.log(blog)
+        res.send({
+            data:blog
+        })
+    }catch(err){
+        console.log(err.message)
+        res.status(404).send({
             err:err.message
         })
     }
